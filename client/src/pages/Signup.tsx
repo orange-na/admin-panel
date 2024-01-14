@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Signup = () => {
@@ -13,7 +13,6 @@ const Signup = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleChanged = (e: any) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-    console.log(inputs);
   };
 
   const handleSignUp = async () => {
