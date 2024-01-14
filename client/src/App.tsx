@@ -7,6 +7,8 @@ import {
 import "./App.css";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Account from "./pages/Account";
+import Signup from "./pages/signup";
 
 function App() {
   const currentUser = true;
@@ -37,11 +39,19 @@ function App() {
           path: "/",
           element: <Home />,
         },
+        {
+          path: "/account",
+          element: <Account />,
+        },
       ],
     },
     {
       path: "/login",
       element: <Login />,
+    },
+    {
+      path: "/signup",
+      element: <Signup />,
     },
   ]);
   return (
