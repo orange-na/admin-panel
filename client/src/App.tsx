@@ -9,6 +9,8 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Account from "./pages/Account";
 import Signup from "./pages/signup";
+import Header from "./components/Header";
+import SideBar from "./components/SideBar";
 
 function App() {
   const currentUser = true;
@@ -21,7 +23,11 @@ function App() {
   const Layout = () => {
     return (
       <div>
-        <Outlet />
+        <Header />
+        <div className="flex">
+          <SideBar />
+          <Outlet />
+        </div>
       </div>
     );
   };
