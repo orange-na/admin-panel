@@ -11,6 +11,7 @@ import Account from "./pages/Account";
 import Signup from "./pages/signup";
 import Header from "./components/Header";
 import SideBar from "./components/SideBar";
+import Groups from "./pages/Groups";
 
 function App() {
   const currentUser = true;
@@ -46,8 +47,12 @@ function App() {
           element: <Home />,
         },
         {
-          path: "/account",
+          path: "/users/:id",
           element: <Account />,
+        },
+        {
+          path: "/groups/:id",
+          element: <Groups />,
         },
       ],
     },

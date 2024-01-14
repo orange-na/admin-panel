@@ -11,7 +11,7 @@ import RestaurantIcon from "@mui/icons-material/Restaurant";
 function SideBar() {
   const pathname = useLocation().pathname;
   const currentUser = {
-    id: "",
+    id: "1",
     profileicon: "",
   };
   //   const { results } = useContext(ResultsContext);
@@ -34,31 +34,34 @@ function SideBar() {
             </li>
           </Link>
           <Link
-            to={`/profile/${currentUser.id}`}
+            to={`/users/${currentUser.id}`}
             className="w-full h-full block items-center"
             state={currentUser}
           >
             <li
               className={
-                pathname === `/profile/${currentUser.id}`
+                pathname === `/users/${currentUser.id}`
                   ? "px-[20px] py-[15px] bg-slate-700 w-full h-full rounded-2xl text-white flex items-center gap-[10px] hover:opacity-[90%] duration-200"
                   : "px-[20px] py-[15px] bg-white w-full h-full rounded-2xl text-slate-900 flex items-center gap-[10px] hover:bg-slate-100 duration-200"
               }
             >
               <PersonIcon sx={{ fontSize: 22 }} />
-              <span>User</span>
+              <span>Users</span>
             </li>
           </Link>
-          <Link to="/liked" className="w-full h-full block items-center">
+          <Link
+            to={`/groups/${currentUser.id}`}
+            className="w-full h-full block items-center"
+          >
             <li
               className={
-                pathname === "/liked"
+                pathname === `/groups/${currentUser.id}`
                   ? "px-[20px] py-[15px] bg-slate-700 w-full h-full rounded-2xl text-white flex items-center gap-[10px] hover:opacity-[90%] duration-200"
                   : "px-[20px] py-[15px] bg-white w-full h-full rounded-2xl text-slate-900 flex items-center gap-[10px] hover:bg-slate-100 duration-200"
               }
             >
               <FavoriteIcon sx={{ fontSize: 22 }} />
-              <span>Saved</span>
+              <span>Groups</span>
             </li>
           </Link>
           <Link to="/simulate" className="w-full h-full block items-center">

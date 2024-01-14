@@ -1,8 +1,8 @@
 import express from "express";
-import { signUp } from "../controllers/signup";
+import { addGroup } from "../controllers/groupts";
 
 const router = express.Router();
 
-router.post("/signup", signUp);
+router.post("/addgroup", addGroup);
 
 export default router;
