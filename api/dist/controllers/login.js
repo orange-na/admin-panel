@@ -44,6 +44,8 @@ const logout = (req, res) => {
         .clearCookie("accessToken", {
         secure: true,
         sameSite: "none",
+        path: "/",
+        domain: "localhost",
     })
         .status(200)
         .json("LOGOUT");
