@@ -1,7 +1,9 @@
 import express from "express";
-import { addGroup } from "../controllers/groupts";
+import { addGroup, getGroup } from "../controllers/groupts";
 
 const router = express.Router();
+
+router.get("/getGroups", getGroup);
 
 router.post("/addgroup", addGroup);
 

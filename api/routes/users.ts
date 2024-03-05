@@ -1,8 +1,8 @@
 import express from "express";
-import { getUser } from "../controllers/users";
+import { listGroupsByUser } from "../controllers/users";
 
 const router = express.Router();
 
-router.get("/getUser", getUser);
+router.get("/me/groups", listGroupsByUser);
 
 export default router;

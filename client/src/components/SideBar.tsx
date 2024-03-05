@@ -3,9 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 // import { ResultsContext } from "../contexts/resultsContext";
 import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import RestaurantIcon from "@mui/icons-material/Restaurant";
+import GroupsOutlinedIcon from "@mui/icons-material/GroupsOutlined";
 // import { AuthContext } from "../contexts/authContext";
 
 function SideBar() {
@@ -60,7 +60,7 @@ function SideBar() {
                   : "px-[20px] py-[15px] bg-white w-full h-full rounded-2xl text-slate-900 flex items-center gap-[10px] hover:bg-slate-100 duration-200"
               }
             >
-              <FavoriteIcon sx={{ fontSize: 22 }} />
+              <GroupsOutlinedIcon sx={{ fontSize: 22 }} />
               <span>Groups</span>
             </li>
           </Link>

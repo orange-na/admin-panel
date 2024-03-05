@@ -8,15 +8,20 @@ import "./App.css";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Account from "./pages/Account";
-import Signup from "./pages/signup";
+import Signup from "./pages/Signup";
 import Header from "./components/Header";
 import SideBar from "./components/SideBar";
 import Groups from "./pages/Groups";
+import { ReactNode } from "react";
+
+interface IsLoginProps {
+  children: ReactNode;
+}
 
 function App() {
   const currentUser = true;
 
-  const IsLogin = ({ children }) => {
+  const IsLogin: React.FC<IsLoginProps> = ({ children }) => {
     if (!currentUser) return <Navigate to="/login" />;
     return children;
   };
