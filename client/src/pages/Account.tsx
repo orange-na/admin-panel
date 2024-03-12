@@ -73,7 +73,6 @@ const Account = () => {
         >
           Accept
         </button>
-        <button>button</button>
       </div>
     </div>
   );
